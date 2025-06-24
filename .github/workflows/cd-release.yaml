@@ -14,7 +14,7 @@ jobs:
       - name: checked out the branch name
         run: echo "branch name ${{github.ref}}"
       - name: Build Website With Parcel
-        run: npx parcel build "./src/index.html" --dist-dir "./rel-dist" --public-url "./"
+        run: npx parcel build "./src/index.html" --dist-dir "./rel-dist" --public-url "./dist"
       - name: Upload Build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
